@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E82546E52AA30ECB00FE78E0 /* ExpendiXApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82546E42AA30ECB00FE78E0 /* ExpendiXApp.swift */; };
+		E82546E72AA30ECB00FE78E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82546E62AA30ECB00FE78E0 /* ContentView.swift */; };
+		E82546E92AA30ECD00FE78E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82546E82AA30ECD00FE78E0 /* Assets.xcassets */; };
+		E82546EC2AA30ECD00FE78E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82546EB2AA30ECD00FE78E0 /* Preview Assets.xcassets */; };
+		E82546F72AA3102200FE78E0 /* EXLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82546F62AA3102200FE78E0 /* EXLoginView.swift */; };
+		E82546F92AA31A3A00FE78E0 /* EXTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82546F82AA31A3A00FE78E0 /* EXTextFieldView.swift */; };
+		E82546FB2AA3205200FE78E0 /* EXButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82546FA2AA3205200FE78E0 /* EXButtonView.swift */; };
+		E82546FD2AA3247500FE78E0 /* EXHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82546FC2AA3247500FE78E0 /* EXHeaderView.swift */; };
+		E82546FF2AA325E000FE78E0 /* EXSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82546FE2AA325E000FE78E0 /* EXSignUpView.swift */; };
+		E82547022AA339F400FE78E0 /* EXHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82547012AA339F400FE78E0 /* EXHomeView.swift */; };
+		E82547042AA3441600FE78E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E82547032AA3441600FE78E0 /* GoogleService-Info.plist */; };
+		E82547072AA3444D00FE78E0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82547062AA3444D00FE78E0 /* User.swift */; };
+		E82547092AA344B400FE78E0 /* EXSignUpViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82547082AA344B400FE78E0 /* EXSignUpViewViewModel.swift */; };
+		E825470B2AA3840B00FE78E0 /* EXErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825470A2AA3840B00FE78E0 /* EXErrorMessage.swift */; };
+		E825470E2AA386A600FE78E0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E825470D2AA386A600FE78E0 /* FirebaseAuth */; };
+		E82547102AA386A600FE78E0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E825470F2AA386A600FE78E0 /* FirebaseFirestore */; };
+		E82547122AA386A600FE78E0 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E82547112AA386A600FE78E0 /* FirebaseFirestoreSwift */; };
+		E82547152AA3889300FE78E0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82547142AA3889300FE78E0 /* Extensions.swift */; };
+		E8DA1AB32AA457760068B333 /* EXLoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DA1AB22AA457760068B333 /* EXLoginViewViewModel.swift */; };
+		E8DA1AB52AA458B60068B333 /* EXMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DA1AB42AA458B60068B333 /* EXMainView.swift */; };
+		E8DA1AB72AA458CA0068B333 /* EXMainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DA1AB62AA458CA0068B333 /* EXMainViewViewModel.swift */; };
+		E8DA1AB92AA45F9B0068B333 /* EXProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DA1AB82AA45F9B0068B333 /* EXProfileView.swift */; };
+		E8DA1ABB2AA45FB60068B333 /* EXProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DA1ABA2AA45FB60068B333 /* EXProfileViewViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E82546E12AA30ECB00FE78E0 /* ExpendiX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpendiX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E82546E42AA30ECB00FE78E0 /* ExpendiXApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpendiXApp.swift; sourceTree = "<group>"; };
+		E82546E62AA30ECB00FE78E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E82546E82AA30ECD00FE78E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E82546EB2AA30ECD00FE78E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E82546F62AA3102200FE78E0 /* EXLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXLoginView.swift; sourceTree = "<group>"; };
+		E82546F82AA31A3A00FE78E0 /* EXTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXTextFieldView.swift; sourceTree = "<group>"; };
+		E82546FA2AA3205200FE78E0 /* EXButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXButtonView.swift; sourceTree = "<group>"; };
+		E82546FC2AA3247500FE78E0 /* EXHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXHeaderView.swift; sourceTree = "<group>"; };
+		E82546FE2AA325E000FE78E0 /* EXSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXSignUpView.swift; sourceTree = "<group>"; };
+		E82547012AA339F400FE78E0 /* EXHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXHomeView.swift; sourceTree = "<group>"; };
+		E82547032AA3441600FE78E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E82547062AA3444D00FE78E0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E82547082AA344B400FE78E0 /* EXSignUpViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXSignUpViewViewModel.swift; sourceTree = "<group>"; };
+		E825470A2AA3840B00FE78E0 /* EXErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXErrorMessage.swift; sourceTree = "<group>"; };
+		E82547142AA3889300FE78E0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E8DA1AB22AA457760068B333 /* EXLoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXLoginViewViewModel.swift; sourceTree = "<group>"; };
+		E8DA1AB42AA458B60068B333 /* EXMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXMainView.swift; sourceTree = "<group>"; };
+		E8DA1AB62AA458CA0068B333 /* EXMainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXMainViewViewModel.swift; sourceTree = "<group>"; };
+		E8DA1AB82AA45F9B0068B333 /* EXProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXProfileView.swift; sourceTree = "<group>"; };
+		E8DA1ABA2AA45FB60068B333 /* EXProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXProfileViewViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E82546DE2AA30ECB00FE78E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E825470E2AA386A600FE78E0 /* FirebaseAuth in Frameworks */,
+				E82547102AA386A600FE78E0 /* FirebaseFirestore in Frameworks */,
+				E82547122AA386A600FE78E0 /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E82546D82AA30ECB00FE78E0 = {
+			isa = PBXGroup;
+			children = (
+				E82546E32AA30ECB00FE78E0 /* ExpendiX */,
+				E82546E22AA30ECB00FE78E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E82546E22AA30ECB00FE78E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E82546E12AA30ECB00FE78E0 /* ExpendiX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E82546E32AA30ECB00FE78E0 /* ExpendiX */ = {
+			isa = PBXGroup;
+			children = (
+				E82546F32AA30F7B00FE78E0 /* App */,
+				E82547052AA3443900FE78E0 /* Models */,
+				E82546F22AA30F2C00FE78E0 /* Views */,
+				E82547002AA3281E00FE78E0 /* ViewModels */,
+				E82547132AA3888300FE78E0 /* Utils */,
+				E82546EA2AA30ECD00FE78E0 /* Preview Content */,
+			);
+			path = ExpendiX;
+			sourceTree = "<group>";
+		};
+		E82546EA2AA30ECD00FE78E0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E82546EB2AA30ECD00FE78E0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E82546F22AA30F2C00FE78E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E82546F52AA30FE200FE78E0 /* Components */,
+				E82546F42AA30FDB00FE78E0 /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E82546F32AA30F7B00FE78E0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E82546E82AA30ECD00FE78E0 /* Assets.xcassets */,
+				E82547032AA3441600FE78E0 /* GoogleService-Info.plist */,
+				E82546E42AA30ECB00FE78E0 /* ExpendiXApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E82546F42AA30FDB00FE78E0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E82546E62AA30ECB00FE78E0 /* ContentView.swift */,
+				E82546F62AA3102200FE78E0 /* EXLoginView.swift */,
+				E82546FE2AA325E000FE78E0 /* EXSignUpView.swift */,
+				E82547012AA339F400FE78E0 /* EXHomeView.swift */,
+				E8DA1AB42AA458B60068B333 /* EXMainView.swift */,
+				E8DA1AB82AA45F9B0068B333 /* EXProfileView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		E82546F52AA30FE200FE78E0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E82546F82AA31A3A00FE78E0 /* EXTextFieldView.swift */,
+				E82546FA2AA3205200FE78E0 /* EXButtonView.swift */,
+				E82546FC2AA3247500FE78E0 /* EXHeaderView.swift */,
+				E825470A2AA3840B00FE78E0 /* EXErrorMessage.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E82547002AA3281E00FE78E0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E82547082AA344B400FE78E0 /* EXSignUpViewViewModel.swift */,
+				E8DA1AB22AA457760068B333 /* EXLoginViewViewModel.swift */,
+				E8DA1AB62AA458CA0068B333 /* EXMainViewViewModel.swift */,
+				E8DA1ABA2AA45FB60068B333 /* EXProfileViewViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E82547052AA3443900FE78E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E82547062AA3444D00FE78E0 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E82547132AA3888300FE78E0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E82547142AA3889300FE78E0 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E82546E02AA30ECB00FE78E0 /* ExpendiX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E82546EF2AA30ECD00FE78E0 /* Build configuration list for PBXNativeTarget "ExpendiX" */;
+			buildPhases = (
+				E82546DD2AA30ECB00FE78E0 /* Sources */,
+				E82546DE2AA30ECB00FE78E0 /* Frameworks */,
+				E82546DF2AA30ECB00FE78E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExpendiX;
+			packageProductDependencies = (
+				E825470D2AA386A600FE78E0 /* FirebaseAuth */,
+				E825470F2AA386A600FE78E0 /* FirebaseFirestore */,
+				E82547112AA386A600FE78E0 /* FirebaseFirestoreSwift */,
+			);
+			productName = ExpendiX;
+			productReference = E82546E12AA30ECB00FE78E0 /* ExpendiX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E82546D92AA30ECB00FE78E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					E82546E02AA30ECB00FE78E0 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = E82546DC2AA30ECB00FE78E0 /* Build configuration list for PBXProject "ExpendiX" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E82546D82AA30ECB00FE78E0;
+			packageReferences = (
+				E825470C2AA386A600FE78E0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = E82546E22AA30ECB00FE78E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E82546E02AA30ECB00FE78E0 /* ExpendiX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E82546DF2AA30ECB00FE78E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E82546EC2AA30ECD00FE78E0 /* Preview Assets.xcassets in Resources */,
+				E82546E92AA30ECD00FE78E0 /* Assets.xcassets in Resources */,
+				E82547042AA3441600FE78E0 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E82546DD2AA30ECB00FE78E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E82546F72AA3102200FE78E0 /* EXLoginView.swift in Sources */,
+				E82546FF2AA325E000FE78E0 /* EXSignUpView.swift in Sources */,
+				E825470B2AA3840B00FE78E0 /* EXErrorMessage.swift in Sources */,
+				E82547092AA344B400FE78E0 /* EXSignUpViewViewModel.swift in Sources */,
+				E8DA1ABB2AA45FB60068B333 /* EXProfileViewViewModel.swift in Sources */,
+				E82546E72AA30ECB00FE78E0 /* ContentView.swift in Sources */,
+				E82546F92AA31A3A00FE78E0 /* EXTextFieldView.swift in Sources */,
+				E8DA1AB52AA458B60068B333 /* EXMainView.swift in Sources */,
+				E8DA1AB92AA45F9B0068B333 /* EXProfileView.swift in Sources */,
+				E82547022AA339F400FE78E0 /* EXHomeView.swift in Sources */,
+				E82547152AA3889300FE78E0 /* Extensions.swift in Sources */,
+				E82547072AA3444D00FE78E0 /* User.swift in Sources */,
+				E82546E52AA30ECB00FE78E0 /* ExpendiXApp.swift in Sources */,
+				E8DA1AB32AA457760068B333 /* EXLoginViewViewModel.swift in Sources */,
+				E82546FD2AA3247500FE78E0 /* EXHeaderView.swift in Sources */,
+				E8DA1AB72AA458CA0068B333 /* EXMainViewViewModel.swift in Sources */,
+				E82546FB2AA3205200FE78E0 /* EXButtonView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E82546ED2AA30ECD00FE78E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E82546EE2AA30ECD00FE78E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E82546F02AA30ECD00FE78E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ExpendiX/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luxurycapital.ExpendiX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E82546F12AA30ECD00FE78E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ExpendiX/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luxurycapital.ExpendiX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E82546DC2AA30ECB00FE78E0 /* Build configuration list for PBXProject "ExpendiX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E82546ED2AA30ECD00FE78E0 /* Debug */,
+				E82546EE2AA30ECD00FE78E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E82546EF2AA30ECD00FE78E0 /* Build configuration list for PBXNativeTarget "ExpendiX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E82546F02AA30ECD00FE78E0 /* Debug */,
+				E82546F12AA30ECD00FE78E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E825470C2AA386A600FE78E0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E825470D2AA386A600FE78E0 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E825470C2AA386A600FE78E0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E825470F2AA386A600FE78E0 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E825470C2AA386A600FE78E0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		E82547112AA386A600FE78E0 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E825470C2AA386A600FE78E0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E82546D92AA30ECB00FE78E0 /* Project object */;
+}
