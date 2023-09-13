@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct EXHeaderView: View {
+    enum EXHeaderContentColor {
+        case light
+        case dark
+    }
+    
     @Environment(\.presentationMode) var presentationMode
 
     var title: String
     var backButtonVisible = false
+    var contentColor: EXHeaderContentColor = .dark
     
     var body: some View {
         ZStack {
@@ -22,7 +28,7 @@ struct EXHeaderView: View {
                     HStack {
                         Image(systemName: "arrow.left")
                             .font(.system(size: 24))
-                            .foregroundColor(Color("ColorDark50"))
+                            .foregroundColor(contentColor == .dark ? Color("ColorDark50") : .white)
                         Spacer()
                     }
                 }
@@ -30,7 +36,7 @@ struct EXHeaderView: View {
             
             Text(title)
                 .font(.system(size: 24, weight: .medium))
-                .foregroundColor(Color("ColorDark50"))
+                .foregroundColor(contentColor == .dark ? Color("ColorDark50") : .white)
         }
         .padding(.vertical, 16)
     }

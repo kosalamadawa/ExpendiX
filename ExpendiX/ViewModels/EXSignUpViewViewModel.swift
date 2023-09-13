@@ -35,7 +35,7 @@ final class EXSignUpViewViewModel: ObservableObject {
     }
     
     private func insertUserRecord(id: String) {
-        let newUser = User(
+        let newUser = EXUser(
             id: id,
             name: name,
             email: email,

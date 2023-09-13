@@ -12,7 +12,7 @@ struct EXHomeView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            Text("Home")
+            EXDashboardView()
                 .tabItem {
                     Image(selection == 0 ? "homeSelected" : "home")
                     Text("Home")
@@ -20,7 +20,7 @@ struct EXHomeView: View {
                 .tag(0)
             EXProfileView()
                 .tabItem {
-                    Image(selection == 1 ? "userSelected" : "user")
+                    Image(selection == 2 ? "userSelected" : "user")
                     Text("Profile")
                 }
                 .tag(1)
