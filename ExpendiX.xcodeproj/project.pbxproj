@@ -24,6 +24,13 @@
 		E82547102AA386A600FE78E0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E825470F2AA386A600FE78E0 /* FirebaseFirestore */; };
 		E82547122AA386A600FE78E0 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E82547112AA386A600FE78E0 /* FirebaseFirestoreSwift */; };
 		E82547152AA3889300FE78E0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82547142AA3889300FE78E0 /* Extensions.swift */; };
+		E84F239A2ABEE3B0002FC53D /* EXBudgetDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F23992ABEE3B0002FC53D /* EXBudgetDashboardView.swift */; };
+		E84F239C2ABEE673002FC53D /* EXAddBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F239B2ABEE673002FC53D /* EXAddBudgetView.swift */; };
+		E84F239E2ABEE7E2002FC53D /* EXAddBudgetViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F239D2ABEE7E2002FC53D /* EXAddBudgetViewViewModel.swift */; };
+		E84F23A02ABF2C02002FC53D /* EXHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F239F2ABF2C02002FC53D /* EXHelpers.swift */; };
+		E84F23A22ABF3C71002FC53D /* EXPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F23A12ABF3C71002FC53D /* EXPickerView.swift */; };
+		E84F23A42ABF450E002FC53D /* EXBudget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F23A32ABF450E002FC53D /* EXBudget.swift */; };
+		E84F23A62ABF4B2B002FC53D /* EXBudgetDashboardViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F23A52ABF4B2B002FC53D /* EXBudgetDashboardViewViewModel.swift */; };
 		E862BD8A2AB0BC440067D43D /* EXTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E862BD892AB0BC440067D43D /* EXTransaction.swift */; };
 		E862BD8C2AB0CAF50067D43D /* EXIncomeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E862BD8B2AB0CAF50067D43D /* EXIncomeCategory.swift */; };
 		E862BD8E2AB0D2DD0067D43D /* EXDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E862BD8D2AB0D2DD0067D43D /* EXDatePickerView.swift */; };
@@ -59,6 +66,13 @@
 		E82547082AA344B400FE78E0 /* EXSignUpViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXSignUpViewViewModel.swift; sourceTree = "<group>"; };
 		E825470A2AA3840B00FE78E0 /* EXErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXErrorMessage.swift; sourceTree = "<group>"; };
 		E82547142AA3889300FE78E0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E84F23992ABEE3B0002FC53D /* EXBudgetDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXBudgetDashboardView.swift; sourceTree = "<group>"; };
+		E84F239B2ABEE673002FC53D /* EXAddBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXAddBudgetView.swift; sourceTree = "<group>"; };
+		E84F239D2ABEE7E2002FC53D /* EXAddBudgetViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXAddBudgetViewViewModel.swift; sourceTree = "<group>"; };
+		E84F239F2ABF2C02002FC53D /* EXHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXHelpers.swift; sourceTree = "<group>"; };
+		E84F23A12ABF3C71002FC53D /* EXPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXPickerView.swift; sourceTree = "<group>"; };
+		E84F23A32ABF450E002FC53D /* EXBudget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXBudget.swift; sourceTree = "<group>"; };
+		E84F23A52ABF4B2B002FC53D /* EXBudgetDashboardViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXBudgetDashboardViewViewModel.swift; sourceTree = "<group>"; };
 		E862BD892AB0BC440067D43D /* EXTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXTransaction.swift; sourceTree = "<group>"; };
 		E862BD8B2AB0CAF50067D43D /* EXIncomeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXIncomeCategory.swift; sourceTree = "<group>"; };
 		E862BD8D2AB0D2DD0067D43D /* EXDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXDatePickerView.swift; sourceTree = "<group>"; };
@@ -158,6 +172,8 @@
 				E8DA1AB82AA45F9B0068B333 /* EXProfileView.swift */,
 				E8F42DA22AA4DC47006F5264 /* EXDashboardView.swift */,
 				E8C1CFBA2AAE0CD100BDCA08 /* EXAddTransactionView.swift */,
+				E84F23992ABEE3B0002FC53D /* EXBudgetDashboardView.swift */,
+				E84F239B2ABEE673002FC53D /* EXAddBudgetView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -174,6 +190,7 @@
 				E8C1CFC02AAE111800BDCA08 /* EXInputControlView.swift */,
 				E8C1CFC62AAE29F400BDCA08 /* EXCustomCorner.swift */,
 				E8C1CFC82AAE2E5D00BDCA08 /* EXExpenseCategorySheetView.swift */,
+				E84F23A12ABF3C71002FC53D /* EXPickerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -186,6 +203,8 @@
 				E8DA1AB62AA458CA0068B333 /* EXMainViewViewModel.swift */,
 				E8DA1ABA2AA45FB60068B333 /* EXProfileViewViewModel.swift */,
 				E8C1CFC22AAE131100BDCA08 /* EXAddTransactionViewViewModel.swift */,
+				E84F239D2ABEE7E2002FC53D /* EXAddBudgetViewViewModel.swift */,
+				E84F23A52ABF4B2B002FC53D /* EXBudgetDashboardViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -198,6 +217,7 @@
 				E8C5352C2AAF85E2001BE597 /* EXExpenseCategory.swift */,
 				E862BD8B2AB0CAF50067D43D /* EXIncomeCategory.swift */,
 				E862BD892AB0BC440067D43D /* EXTransaction.swift */,
+				E84F23A32ABF450E002FC53D /* EXBudget.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				E82547142AA3889300FE78E0 /* Extensions.swift */,
+				E84F239F2ABF2C02002FC53D /* EXHelpers.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -293,10 +314,15 @@
 				E8C1CFC32AAE131100BDCA08 /* EXAddTransactionViewViewModel.swift in Sources */,
 				E82546FF2AA325E000FE78E0 /* EXSignUpView.swift in Sources */,
 				E825470B2AA3840B00FE78E0 /* EXErrorMessage.swift in Sources */,
+				E84F239C2ABEE673002FC53D /* EXAddBudgetView.swift in Sources */,
 				E82547092AA344B400FE78E0 /* EXSignUpViewViewModel.swift in Sources */,
+				E84F23A62ABF4B2B002FC53D /* EXBudgetDashboardViewViewModel.swift in Sources */,
 				E8DA1ABB2AA45FB60068B333 /* EXProfileViewViewModel.swift in Sources */,
 				E82546F92AA31A3A00FE78E0 /* EXTextFieldView.swift in Sources */,
 				E8DA1AB52AA458B60068B333 /* EXMainView.swift in Sources */,
+				E84F239A2ABEE3B0002FC53D /* EXBudgetDashboardView.swift in Sources */,
+				E84F23A22ABF3C71002FC53D /* EXPickerView.swift in Sources */,
+				E84F23A42ABF450E002FC53D /* EXBudget.swift in Sources */,
 				E862BD8C2AB0CAF50067D43D /* EXIncomeCategory.swift in Sources */,
 				E862BD8E2AB0D2DD0067D43D /* EXDatePickerView.swift in Sources */,
 				E8C1CFC92AAE2E5D00BDCA08 /* EXExpenseCategorySheetView.swift in Sources */,
@@ -305,6 +331,7 @@
 				E82547022AA339F400FE78E0 /* EXHomeView.swift in Sources */,
 				E8C1CFBB2AAE0CD100BDCA08 /* EXAddTransactionView.swift in Sources */,
 				E862BD8A2AB0BC440067D43D /* EXTransaction.swift in Sources */,
+				E84F239E2ABEE7E2002FC53D /* EXAddBudgetViewViewModel.swift in Sources */,
 				E8F42DA32AA4DC47006F5264 /* EXDashboardView.swift in Sources */,
 				E8C1CFC12AAE111800BDCA08 /* EXInputControlView.swift in Sources */,
 				E8F2CECE2AA4DF9E0066894F /* EXDashboardItemView.swift in Sources */,
@@ -312,6 +339,7 @@
 				E8C1CFC72AAE29F400BDCA08 /* EXCustomCorner.swift in Sources */,
 				E82547072AA3444D00FE78E0 /* EXUser.swift in Sources */,
 				E82546E52AA30ECB00FE78E0 /* ExpendiXApp.swift in Sources */,
+				E84F23A02ABF2C02002FC53D /* EXHelpers.swift in Sources */,
 				E8DA1AB32AA457760068B333 /* EXLoginViewViewModel.swift in Sources */,
 				E82546FD2AA3247500FE78E0 /* EXHeaderView.swift in Sources */,
 				E8DA1AB72AA458CA0068B333 /* EXMainViewViewModel.swift in Sources */,

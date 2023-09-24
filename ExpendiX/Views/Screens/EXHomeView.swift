@@ -18,12 +18,18 @@ struct EXHomeView: View {
                     Text("Home")
                 }
                 .tag(0)
+            EXBudgetDashboardView()
+                .tabItem {
+                    Image(selection == 1 ? "budgetSelected" : "budget")
+                    Text("Budget")
+                }
+                .tag(1)
             EXProfileView()
                 .tabItem {
                     Image(selection == 2 ? "userSelected" : "user")
                     Text("Profile")
                 }
-                .tag(1)
+                .tag(2)
         }
         .tint(Color("ColorAccent"))
     }
