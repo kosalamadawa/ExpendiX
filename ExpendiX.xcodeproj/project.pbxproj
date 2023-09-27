@@ -41,13 +41,18 @@
 		E8C1CFC72AAE29F400BDCA08 /* EXCustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1CFC62AAE29F400BDCA08 /* EXCustomCorner.swift */; };
 		E8C1CFC92AAE2E5D00BDCA08 /* EXExpenseCategorySheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1CFC82AAE2E5D00BDCA08 /* EXExpenseCategorySheetView.swift */; };
 		E8C5352D2AAF85E2001BE597 /* EXExpenseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C5352C2AAF85E2001BE597 /* EXExpenseCategory.swift */; };
+		E8C9F2502AC328B700DC6DA2 /* EXTransactionsPieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9F24F2AC328B700DC6DA2 /* EXTransactionsPieChartView.swift */; };
 		E8DA1AB32AA457760068B333 /* EXLoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DA1AB22AA457760068B333 /* EXLoginViewViewModel.swift */; };
 		E8DA1AB52AA458B60068B333 /* EXMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DA1AB42AA458B60068B333 /* EXMainView.swift */; };
 		E8DA1AB72AA458CA0068B333 /* EXMainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DA1AB62AA458CA0068B333 /* EXMainViewViewModel.swift */; };
 		E8DA1AB92AA45F9B0068B333 /* EXProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DA1AB82AA45F9B0068B333 /* EXProfileView.swift */; };
 		E8DA1ABB2AA45FB60068B333 /* EXProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DA1ABA2AA45FB60068B333 /* EXProfileViewViewModel.swift */; };
+		E8F022402AC08F6400AF173E /* EXDashboardViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F0223F2AC08F6400AF173E /* EXDashboardViewViewModel.swift */; };
+		E8F022422AC09E0500AF173E /* EXExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F022412AC09E0500AF173E /* EXExpense.swift */; };
 		E8F2CECE2AA4DF9E0066894F /* EXDashboardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2CECD2AA4DF9E0066894F /* EXDashboardItemView.swift */; };
 		E8F42DA32AA4DC47006F5264 /* EXDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F42DA22AA4DC47006F5264 /* EXDashboardView.swift */; };
+		E8FC32BD2AC1F95800AE60FE /* EXIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FC32BC2AC1F95800AE60FE /* EXIncome.swift */; };
+		E8FC32C02AC1FF4900AE60FE /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = E8FC32BF2AC1FF4900AE60FE /* SwiftUICharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,13 +88,17 @@
 		E8C1CFC62AAE29F400BDCA08 /* EXCustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXCustomCorner.swift; sourceTree = "<group>"; };
 		E8C1CFC82AAE2E5D00BDCA08 /* EXExpenseCategorySheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXExpenseCategorySheetView.swift; sourceTree = "<group>"; };
 		E8C5352C2AAF85E2001BE597 /* EXExpenseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXExpenseCategory.swift; sourceTree = "<group>"; };
+		E8C9F24F2AC328B700DC6DA2 /* EXTransactionsPieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXTransactionsPieChartView.swift; sourceTree = "<group>"; };
 		E8DA1AB22AA457760068B333 /* EXLoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXLoginViewViewModel.swift; sourceTree = "<group>"; };
 		E8DA1AB42AA458B60068B333 /* EXMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXMainView.swift; sourceTree = "<group>"; };
 		E8DA1AB62AA458CA0068B333 /* EXMainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXMainViewViewModel.swift; sourceTree = "<group>"; };
 		E8DA1AB82AA45F9B0068B333 /* EXProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXProfileView.swift; sourceTree = "<group>"; };
 		E8DA1ABA2AA45FB60068B333 /* EXProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXProfileViewViewModel.swift; sourceTree = "<group>"; };
+		E8F0223F2AC08F6400AF173E /* EXDashboardViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXDashboardViewViewModel.swift; sourceTree = "<group>"; };
+		E8F022412AC09E0500AF173E /* EXExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXExpense.swift; sourceTree = "<group>"; };
 		E8F2CECD2AA4DF9E0066894F /* EXDashboardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXDashboardItemView.swift; sourceTree = "<group>"; };
 		E8F42DA22AA4DC47006F5264 /* EXDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXDashboardView.swift; sourceTree = "<group>"; };
+		E8FC32BC2AC1F95800AE60FE /* EXIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXIncome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E825470E2AA386A600FE78E0 /* FirebaseAuth in Frameworks */,
+				E8FC32C02AC1FF4900AE60FE /* SwiftUICharts in Frameworks */,
 				E82547102AA386A600FE78E0 /* FirebaseFirestore in Frameworks */,
 				E82547122AA386A600FE78E0 /* FirebaseFirestoreSwift in Frameworks */,
 			);
@@ -191,6 +201,7 @@
 				E8C1CFC62AAE29F400BDCA08 /* EXCustomCorner.swift */,
 				E8C1CFC82AAE2E5D00BDCA08 /* EXExpenseCategorySheetView.swift */,
 				E84F23A12ABF3C71002FC53D /* EXPickerView.swift */,
+				E8C9F24F2AC328B700DC6DA2 /* EXTransactionsPieChartView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -205,6 +216,7 @@
 				E8C1CFC22AAE131100BDCA08 /* EXAddTransactionViewViewModel.swift */,
 				E84F239D2ABEE7E2002FC53D /* EXAddBudgetViewViewModel.swift */,
 				E84F23A52ABF4B2B002FC53D /* EXBudgetDashboardViewViewModel.swift */,
+				E8F0223F2AC08F6400AF173E /* EXDashboardViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -218,6 +230,8 @@
 				E862BD8B2AB0CAF50067D43D /* EXIncomeCategory.swift */,
 				E862BD892AB0BC440067D43D /* EXTransaction.swift */,
 				E84F23A32ABF450E002FC53D /* EXBudget.swift */,
+				E8F022412AC09E0500AF173E /* EXExpense.swift */,
+				E8FC32BC2AC1F95800AE60FE /* EXIncome.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,6 +265,7 @@
 				E825470D2AA386A600FE78E0 /* FirebaseAuth */,
 				E825470F2AA386A600FE78E0 /* FirebaseFirestore */,
 				E82547112AA386A600FE78E0 /* FirebaseFirestoreSwift */,
+				E8FC32BF2AC1FF4900AE60FE /* SwiftUICharts */,
 			);
 			productName = ExpendiX;
 			productReference = E82546E12AA30ECB00FE78E0 /* ExpendiX.app */;
@@ -282,6 +297,7 @@
 			mainGroup = E82546D82AA30ECB00FE78E0;
 			packageReferences = (
 				E825470C2AA386A600FE78E0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E8FC32BE2AC1FF4900AE60FE /* XCRemoteSwiftPackageReference "chartview" */,
 			);
 			productRefGroup = E82546E22AA30ECB00FE78E0 /* Products */;
 			projectDirPath = "";
@@ -318,8 +334,10 @@
 				E82547092AA344B400FE78E0 /* EXSignUpViewViewModel.swift in Sources */,
 				E84F23A62ABF4B2B002FC53D /* EXBudgetDashboardViewViewModel.swift in Sources */,
 				E8DA1ABB2AA45FB60068B333 /* EXProfileViewViewModel.swift in Sources */,
+				E8F022422AC09E0500AF173E /* EXExpense.swift in Sources */,
 				E82546F92AA31A3A00FE78E0 /* EXTextFieldView.swift in Sources */,
 				E8DA1AB52AA458B60068B333 /* EXMainView.swift in Sources */,
+				E8C9F2502AC328B700DC6DA2 /* EXTransactionsPieChartView.swift in Sources */,
 				E84F239A2ABEE3B0002FC53D /* EXBudgetDashboardView.swift in Sources */,
 				E84F23A22ABF3C71002FC53D /* EXPickerView.swift in Sources */,
 				E84F23A42ABF450E002FC53D /* EXBudget.swift in Sources */,
@@ -330,6 +348,7 @@
 				E8DA1AB92AA45F9B0068B333 /* EXProfileView.swift in Sources */,
 				E82547022AA339F400FE78E0 /* EXHomeView.swift in Sources */,
 				E8C1CFBB2AAE0CD100BDCA08 /* EXAddTransactionView.swift in Sources */,
+				E8FC32BD2AC1F95800AE60FE /* EXIncome.swift in Sources */,
 				E862BD8A2AB0BC440067D43D /* EXTransaction.swift in Sources */,
 				E84F239E2ABEE7E2002FC53D /* EXAddBudgetViewViewModel.swift in Sources */,
 				E8F42DA32AA4DC47006F5264 /* EXDashboardView.swift in Sources */,
@@ -343,6 +362,7 @@
 				E8DA1AB32AA457760068B333 /* EXLoginViewViewModel.swift in Sources */,
 				E82546FD2AA3247500FE78E0 /* EXHeaderView.swift in Sources */,
 				E8DA1AB72AA458CA0068B333 /* EXMainViewViewModel.swift in Sources */,
+				E8F022402AC08F6400AF173E /* EXDashboardViewViewModel.swift in Sources */,
 				E8C5352D2AAF85E2001BE597 /* EXExpenseCategory.swift in Sources */,
 				E82546FB2AA3205200FE78E0 /* EXButtonView.swift in Sources */,
 			);
@@ -553,6 +573,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		E8FC32BE2AC1FF4900AE60FE /* XCRemoteSwiftPackageReference "chartview" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apppear/chartview.git";
+			requirement = {
+				kind = exactVersion;
+				version = "2.0.0-beta.2";
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -570,6 +598,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E825470C2AA386A600FE78E0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		E8FC32BF2AC1FF4900AE60FE /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E8FC32BE2AC1FF4900AE60FE /* XCRemoteSwiftPackageReference "chartview" */;
+			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

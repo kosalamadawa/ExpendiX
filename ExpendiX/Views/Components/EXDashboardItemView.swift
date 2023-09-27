@@ -33,12 +33,23 @@ struct EXDashboardItemView: View {
         }
     }
     
-    var color: Color {
+    var bgColor: Color {
         switch type {
         case .income:
-            return Color("ColorGreen")
+            return Color("ColorGreen10")
         case .expense:
-            return Color("ColorRed")
+            return Color("ColorRed10")
+        case .saving:
+            return Color("ColorBlue")
+        }
+    }
+    
+    var borderColor: Color {
+        switch type {
+        case .income:
+            return Color("ColorGreen50")
+        case .expense:
+            return Color("ColorRed50")
         case .saving:
             return Color("ColorBlue")
         }
@@ -46,32 +57,33 @@ struct EXDashboardItemView: View {
     
     var body: some View {
         HStack(spacing: 10) {
-            ZStack {
-                Image(icon)
-                    .padding(8)
-            }
-            .background {
-                RoundedRectangle(cornerRadius: 14)
-                    .fill(.white)
-            }
             VStack(alignment: .leading, spacing: 4) {
                 Text(label)
+                    .foregroundColor(Color("ColorLight20"))
                     .font(.system(size: 16, weight: .regular))
                 Text("$\(amount, specifier: "%.2f")")
-                    .font(.system(size: 18, weight: .medium))
+                    .foregroundColor(.black)
+                    .font(.system(size: 20, weight: .bold))
             }
-            .foregroundColor(.white)
+            Spacer()
         }
         .padding(16)
         .background {
-            RoundedRectangle(cornerRadius: 28)
-                .fill(color)
+            RoundedRectangle(cornerRadius: 10)
+                .fill(bgColor)
+                .padding(1)
         }
+        .background {
+            RoundedRectangle(cornerRadius: 10)
+                .fill(borderColor)
+        }
+
     }
 }
 
 struct EXDashboardItemView_Previews: PreviewProvider {
     static var previews: some View {
-        EXDashboardItemView(type: .saving, amount: 5000)
+        EXDashboardItemView(type: .expense, amount: 5000)
+            .padding()
     }
 }

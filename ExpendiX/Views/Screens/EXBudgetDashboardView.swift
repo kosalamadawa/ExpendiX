@@ -11,7 +11,7 @@ struct EXBudgetDashboardView: View {
     @StateObject var viewModel = EXBudgetDashboardViewViewModel()
     
     var gridLayout: [GridItem] {
-        return  Array(repeating: GridItem(.flexible()), count: viewModel.budgets.count)
+        return  Array(repeating: GridItem(.flexible()), count: 2)
     }
     
     var body: some View {
