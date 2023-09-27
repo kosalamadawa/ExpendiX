@@ -16,6 +16,7 @@ final class EXAddTransactionViewViewModel: ObservableObject {
     @Published var incomeCategory: EXIncomeCategory?
     @Published var date = Date()
     @Published var showExpenseCategoriesSheet = false
+    @Published var showIncomeCategoriesSheet = false
     @Published var isAddingTransaction = false
     
     let expenseCategories = EXExpenseCategory.allCases
@@ -26,6 +27,7 @@ final class EXAddTransactionViewViewModel: ObservableObject {
         isAddingTransaction = true
         
         guard isValid(type: .expense) else {
+            isAddingTransaction = false
             return
         }
         
@@ -53,16 +55,34 @@ final class EXAddTransactionViewViewModel: ObservableObject {
     }
     
     public func addIncome() {
-        let transaction = EXTransaction(
-            id: "",
-            userId: "",
+        isAddingTransaction = true
+        
+        guard isValid(type: .income) else {
+            isAddingTransaction = false
+            return
+        }
+        
+        guard let userId = Auth.auth().currentUser?.uid else {
+            isAddingTransaction = false
+            return
+        }
+        
+        let newId = UUID().uuidString
+        let newIncome = EXIncome(
+            id: newId,
+            userId: userId,
             amount: Double(amount) ?? 0,
             description: description,
-            category: incomeCategory ?? EXIncomeCategory.miscellaneous,
+            category: incomeCategory ?? .miscellaneous,
             date: date.timeIntervalSince1970
         )
         
-        print(transaction)
+        let db = Firestore.firestore()
+        db.collection("incomes")
+            .document(newId)
+            .setData(newIncome.asDictionary())
+        
+        isAddingTransaction = false
     }
     
     private func isValid(type: EXTransactionType) -> Bool {

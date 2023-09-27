@@ -16,61 +16,68 @@ struct EXDashboardView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                HStack {
-                    Text("Hello Sahan")
-                        .font(.system(size: 34, weight: .bold, design: .rounded))
-                        .foregroundColor(Color("ColorDark50"))
-                    Spacer()
-                    NavigationLink {
-                        EXAddTransactionView(type: .expense)
-                    } label: {
+            ZStack {
+                VStack {
+                    HStack {
+                        Text("Hello Sahan")
+                            .font(.system(size: 34, weight: .bold, design: .rounded))
+                            .foregroundColor(Color("ColorDark50"))
+                        Spacer()
                         Image(systemName: "plus.circle.fill")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 30, height: 30)
                             .foregroundColor(Color("ColorAccent"))
-                    }
-                }
-                
-                if !viewModel.isLoadingIncomes && !viewModel.isLoadingExpenses {
-                    ScrollView(.vertical, showsIndicators: false) {
-                        VStack {
-                            HStack {
-                                EXDashboardItemView(type: .income, amount: viewModel.totalIncome)
-                                EXDashboardItemView(type: .expense, amount: viewModel.totalExpense)
-                            }
-                            
-                            Picker("", selection: $selectedSegment) {
-                                ForEach(segments, id: \.self) {
-                                    Text($0)
+                            .onTapGesture {
+                                withAnimation {
+                                    viewModel.isTransactionTypeSheetVisible.toggle()
                                 }
                             }
-                            .pickerStyle(.segmented)
-                            .padding(.vertical)
-                            
-                            if selectedSegment == "Expense" {
-                                EXTransactionsPieChartView(type: .expense, expenses: viewModel.expenses)
-                            } else {
-                                EXTransactionsPieChartView(type: .income, incomes: viewModel.incomes)
+                    }
+                    
+                    if !viewModel.isLoadingIncomes && !viewModel.isLoadingExpenses {
+                        ScrollView(.vertical, showsIndicators: false) {
+                            VStack {
+                                HStack {
+                                    EXDashboardItemView(type: .income, amount: viewModel.totalIncome)
+                                    EXDashboardItemView(type: .expense, amount: viewModel.totalExpense)
+                                }
+                                
+                                Picker("", selection: $selectedSegment) {
+                                    ForEach(segments, id: \.self) {
+                                        Text($0)
+                                    }
+                                }
+                                .pickerStyle(.segmented)
+                                .padding(.vertical)
+                                
+                                if selectedSegment == "Expense" {
+                                    EXTransactionsPieChartView(type: .expense, expenses: viewModel.expenses)
+                                } else {
+                                    EXTransactionsPieChartView(type: .income, incomes: viewModel.incomes)
+                                }
+                                
+                                Spacer()
                             }
-                            
+                        }
+                    } else {
+                        VStack {
+                            Spacer()
+                            ProgressView()
+                                .controlSize(.large)
                             Spacer()
                         }
+                        .padding(16)
                     }
-                } else {
-                    VStack {
-                        Spacer()
-                        ProgressView()
-                            .controlSize(.large)
-                        Spacer()
-                    }
-                    .padding(16)
+                    
+                    Spacer()
                 }
+                .padding(.horizontal, 16)
                 
-                Spacer()
+                EXTransactionTypeSheetView(showSheet: viewModel.isTransactionTypeSheetVisible) {
+                    viewModel.isTransactionTypeSheetVisible.toggle()
+                }
             }
-            .padding(.horizontal, 16)
         }
         .onAppear {
             viewModel.fetchData()

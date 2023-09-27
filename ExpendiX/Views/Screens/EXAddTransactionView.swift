@@ -16,7 +16,7 @@ struct EXAddTransactionView: View {
         if type == .expense && viewModel.expenseCategory != nil {
             return viewModel.expenseCategory?.text ?? ""
         } else if type == .income && viewModel.incomeCategory != nil {
-            return viewModel.incomeCategory?.rawValue ?? ""
+            return viewModel.incomeCategory?.text ?? ""
         } else {
             return "Category"
         }
@@ -74,7 +74,11 @@ struct EXAddTransactionView: View {
                     EXTextFieldView(placeholder: "Description", value: $viewModel.description)
                     EXInputControlView(text: category) {
                         withAnimation {
-                            viewModel.showExpenseCategoriesSheet.toggle()
+                            if type == .income {
+                                viewModel.showIncomeCategoriesSheet.toggle()
+                            } else {
+                                viewModel.showExpenseCategoriesSheet.toggle()
+                            }
                         }
                     }
                     EXDatePickerView(value: $viewModel.date)
@@ -91,13 +95,23 @@ struct EXAddTransactionView: View {
                 .padding(.vertical, 16)
             }
             
-            // MARK: - CATEGORY SHEET
+            // MARK: - EXPENSE CATEGORY SHEET
             
-            EXExpenseCategorySheetView(showSheet: viewModel.showExpenseCategoriesSheet, selectCategory: { selectedCategory in
-                viewModel.expenseCategory = selectedCategory as? EXExpenseCategory
-            }) {
-                withAnimation {
-                    viewModel.showExpenseCategoriesSheet.toggle()
+            if type == .income {
+                EXIncomeCategorySheetView(showSheet: viewModel.showIncomeCategoriesSheet, selectCategory: { selectedCategory in
+                    viewModel.incomeCategory = selectedCategory as? EXIncomeCategory
+                }) {
+                    withAnimation {
+                        viewModel.showIncomeCategoriesSheet.toggle()
+                    }
+                }
+            } else {
+                EXExpenseCategorySheetView(showSheet: viewModel.showExpenseCategoriesSheet, selectCategory: { selectedCategory in
+                    viewModel.expenseCategory = selectedCategory as? EXExpenseCategory
+                }) {
+                    withAnimation {
+                        viewModel.showExpenseCategoriesSheet.toggle()
+                    }
                 }
             }
         }
@@ -107,6 +121,6 @@ struct EXAddTransactionView: View {
 
 struct EXAddTransactionView_Previews: PreviewProvider {
     static var previews: some View {
-        EXAddTransactionView(type: .expense)
+        EXAddTransactionView(type: .income)
     }
 }

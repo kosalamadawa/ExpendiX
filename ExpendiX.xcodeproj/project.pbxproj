@@ -24,6 +24,9 @@
 		E82547102AA386A600FE78E0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E825470F2AA386A600FE78E0 /* FirebaseFirestore */; };
 		E82547122AA386A600FE78E0 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E82547112AA386A600FE78E0 /* FirebaseFirestoreSwift */; };
 		E82547152AA3889300FE78E0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82547142AA3889300FE78E0 /* Extensions.swift */; };
+		E83291A62AC499CC00FD1F57 /* EXTransactionTypeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83291A52AC499CC00FD1F57 /* EXTransactionTypeSheetView.swift */; };
+		E83291A82AC49C5600FD1F57 /* EXTransactionTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83291A72AC49C5600FD1F57 /* EXTransactionTypeView.swift */; };
+		E83291AA2AC4A68F00FD1F57 /* EXIncomeCategorySheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83291A92AC4A68F00FD1F57 /* EXIncomeCategorySheetView.swift */; };
 		E84F239A2ABEE3B0002FC53D /* EXBudgetDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F23992ABEE3B0002FC53D /* EXBudgetDashboardView.swift */; };
 		E84F239C2ABEE673002FC53D /* EXAddBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F239B2ABEE673002FC53D /* EXAddBudgetView.swift */; };
 		E84F239E2ABEE7E2002FC53D /* EXAddBudgetViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84F239D2ABEE7E2002FC53D /* EXAddBudgetViewViewModel.swift */; };
@@ -71,6 +74,9 @@
 		E82547082AA344B400FE78E0 /* EXSignUpViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXSignUpViewViewModel.swift; sourceTree = "<group>"; };
 		E825470A2AA3840B00FE78E0 /* EXErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXErrorMessage.swift; sourceTree = "<group>"; };
 		E82547142AA3889300FE78E0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E83291A52AC499CC00FD1F57 /* EXTransactionTypeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXTransactionTypeSheetView.swift; sourceTree = "<group>"; };
+		E83291A72AC49C5600FD1F57 /* EXTransactionTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXTransactionTypeView.swift; sourceTree = "<group>"; };
+		E83291A92AC4A68F00FD1F57 /* EXIncomeCategorySheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXIncomeCategorySheetView.swift; sourceTree = "<group>"; };
 		E84F23992ABEE3B0002FC53D /* EXBudgetDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXBudgetDashboardView.swift; sourceTree = "<group>"; };
 		E84F239B2ABEE673002FC53D /* EXAddBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXAddBudgetView.swift; sourceTree = "<group>"; };
 		E84F239D2ABEE7E2002FC53D /* EXAddBudgetViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXAddBudgetViewViewModel.swift; sourceTree = "<group>"; };
@@ -202,6 +208,9 @@
 				E8C1CFC82AAE2E5D00BDCA08 /* EXExpenseCategorySheetView.swift */,
 				E84F23A12ABF3C71002FC53D /* EXPickerView.swift */,
 				E8C9F24F2AC328B700DC6DA2 /* EXTransactionsPieChartView.swift */,
+				E83291A52AC499CC00FD1F57 /* EXTransactionTypeSheetView.swift */,
+				E83291A72AC49C5600FD1F57 /* EXTransactionTypeView.swift */,
+				E83291A92AC4A68F00FD1F57 /* EXIncomeCategorySheetView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -326,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E83291A82AC49C5600FD1F57 /* EXTransactionTypeView.swift in Sources */,
 				E82546F72AA3102200FE78E0 /* EXLoginView.swift in Sources */,
 				E8C1CFC32AAE131100BDCA08 /* EXAddTransactionViewViewModel.swift in Sources */,
 				E82546FF2AA325E000FE78E0 /* EXSignUpView.swift in Sources */,
@@ -337,6 +347,7 @@
 				E8F022422AC09E0500AF173E /* EXExpense.swift in Sources */,
 				E82546F92AA31A3A00FE78E0 /* EXTextFieldView.swift in Sources */,
 				E8DA1AB52AA458B60068B333 /* EXMainView.swift in Sources */,
+				E83291AA2AC4A68F00FD1F57 /* EXIncomeCategorySheetView.swift in Sources */,
 				E8C9F2502AC328B700DC6DA2 /* EXTransactionsPieChartView.swift in Sources */,
 				E84F239A2ABEE3B0002FC53D /* EXBudgetDashboardView.swift in Sources */,
 				E84F23A22ABF3C71002FC53D /* EXPickerView.swift in Sources */,
@@ -350,6 +361,7 @@
 				E8C1CFBB2AAE0CD100BDCA08 /* EXAddTransactionView.swift in Sources */,
 				E8FC32BD2AC1F95800AE60FE /* EXIncome.swift in Sources */,
 				E862BD8A2AB0BC440067D43D /* EXTransaction.swift in Sources */,
+				E83291A62AC499CC00FD1F57 /* EXTransactionTypeSheetView.swift in Sources */,
 				E84F239E2ABEE7E2002FC53D /* EXAddBudgetViewViewModel.swift in Sources */,
 				E8F42DA32AA4DC47006F5264 /* EXDashboardView.swift in Sources */,
 				E8C1CFC12AAE111800BDCA08 /* EXInputControlView.swift in Sources */,

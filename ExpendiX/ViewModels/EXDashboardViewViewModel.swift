@@ -16,6 +16,7 @@ final class EXDashboardViewViewModel: ObservableObject {
     @Published var incomes: [EXIncome] = []
     @Published var isLoadingExpenses = true
     @Published var isLoadingIncomes = true
+    @Published var isTransactionTypeSheetVisible = false
     
     init() {}
     
@@ -29,6 +30,7 @@ final class EXDashboardViewViewModel: ObservableObject {
     }
     
     private func getTotalExpense(userId: String) {
+        isLoadingExpenses = true
 //        let currentYear = getCurrentYear()
 //        let currentMonth = Calendar.current.component(.month, from: Date())
 //        
@@ -80,6 +82,7 @@ final class EXDashboardViewViewModel: ObservableObject {
     }
     
     private func getTotalIncome(userId: String) {
+        isLoadingIncomes = true
 //        let currentYear = getCurrentYear()
 //        let currentMonth = Calendar.current.component(.month, from: Date())
 //
