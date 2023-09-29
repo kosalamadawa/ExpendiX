@@ -52,9 +52,15 @@ struct EXDashboardView: View {
                                 .padding(.vertical)
                                 
                                 if selectedSegment == "Expense" {
-                                    EXTransactionsPieChartView(type: .expense, expenses: viewModel.expenses)
+                                    EXTransactionsPieChartView(
+                                        type: .expense,
+                                        totalExpensesByCategory: viewModel.totalExpensesByCategory
+                                    )
                                 } else {
-                                    EXTransactionsPieChartView(type: .income, incomes: viewModel.incomes)
+                                    EXTransactionsPieChartView(
+                                        type: .income,
+                                        totalIncomesByCategory: viewModel.totalIncomesByCategory
+                                    )
                                 }
                                 
                                 Spacer()

@@ -18,6 +18,18 @@ final class EXDashboardViewViewModel: ObservableObject {
     @Published var isLoadingIncomes = true
     @Published var isTransactionTypeSheetVisible = false
     
+    var totalExpensesByCategory: [EXExpenseCategory:Double] {
+        return expenses.reduce(into: [EXExpenseCategory:Double]()) { partialResult, expense in
+            partialResult[expense.category, default: 0.0] += expense.amount
+        }
+    }
+    
+    var totalIncomesByCategory: [EXIncomeCategory:Double] {
+        return incomes.reduce(into: [EXIncomeCategory:Double]()) { partialResult, income in
+            partialResult[income.category, default: 0.0] += income.amount
+        }
+    }
+    
     init() {}
     
     public func fetchData() {

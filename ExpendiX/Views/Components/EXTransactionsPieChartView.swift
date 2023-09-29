@@ -15,8 +15,8 @@ struct EXLegend {
 
 struct EXTransactionsPieChartView: View {
     var type: EXTransactionType
-    var expenses: [EXExpense] = []
-    var incomes: [EXIncome] = []
+    var totalIncomesByCategory: [EXIncomeCategory:Double] = [:]
+    var totalExpensesByCategory: [EXExpenseCategory:Double] = [:]
     
     var gridLayout: [GridItem] {
         return  Array(repeating: GridItem(.flexible()), count: 2)
@@ -43,12 +43,12 @@ struct EXTransactionsPieChartView: View {
     var piechartData: [Double] {
         var data: [Double] = []
         if type == .expense {
-            for expense in expenses {
-                data.append(expense.amount)
+            for (_, total) in totalExpensesByCategory {
+                data.append(total)
             }
         } else {
-            for income in incomes {
-                data.append(income.amount)
+            for (_, total) in totalIncomesByCategory {
+                data.append(total)
             }
         }
         return data
@@ -57,12 +57,12 @@ struct EXTransactionsPieChartView: View {
     var legendData: [EXLegend] {
         var legendData: [EXLegend] = []
         if type == .expense {
-            for expense in expenses {
-                legendData.append(EXLegend(category: expense.category.text, amount: expense.amount))
+            for (category, total) in totalExpensesByCategory {
+                legendData.append(EXLegend(category: category.text, amount: total))
             }
         } else {
-            for income in incomes {
-                legendData.append(EXLegend(category: income.category.text, amount: income.amount))
+            for (category, total) in totalIncomesByCategory {
+                legendData.append(EXLegend(category: category.text, amount: total))
             }
         }
         return legendData
@@ -110,47 +110,11 @@ struct EXTransactionsPieChartView: View {
 
 struct EXTransactionsPieChartView_Previews: PreviewProvider {
     static var previews: some View {
-        EXTransactionsPieChartView(type: .expense, expenses: [
-            EXExpense(
-                id: "1",
-                userId: "234",
-                amount: 2000.00,
-                description: "Test",
-                category: .transportation,
-                date: Date().timeIntervalSince1970
-            ),
-            EXExpense(
-                id: "2",
-                userId: "234",
-                amount: 8000.00,
-                description: "Test",
-                category: .billsAndUtilities,
-                date: Date().timeIntervalSince1970
-            ),
-            EXExpense(
-                id: "3",
-                userId: "234",
-                amount: 5000.00,
-                description: "Test",
-                category: .entertainment,
-                date: Date().timeIntervalSince1970
-            ),
-            EXExpense(
-                id: "4",
-                userId: "234",
-                amount: 20000.00,
-                description: "Test",
-                category: .housing,
-                date: Date().timeIntervalSince1970
-            ),
-            EXExpense(
-                id: "5",
-                userId: "234",
-                amount: 55000.00,
-                description: "Test",
-                category: .foodAndDining,
-                date: Date().timeIntervalSince1970
-            ),
+        EXTransactionsPieChartView(type: .expense, totalExpensesByCategory: [
+            .transportation: 12000.0,
+            .billsAndUtilities: 20000.0,
+            .foodAndDining: 75000.0
         ])
+        .padding()
     }
 }
