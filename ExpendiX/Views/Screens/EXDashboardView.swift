@@ -18,8 +18,23 @@ struct EXDashboardView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    HStack {
-                        Text("Hello Sahan")
+                    HStack(spacing: 16) {
+                        Menu {
+                            Button("Logout") {
+                                viewModel.logout()
+                            }
+                        } label: {
+                            Image("user")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 30, height: 30)
+                                .background {
+                                    Capsule()
+                                        .fill(Color("ColorLight60"))
+                                        .frame(width: 45, height: 45)
+                                }
+                        }
+                        Text("Welcome")
                             .font(.system(size: 34, weight: .bold, design: .rounded))
                             .foregroundColor(Color("ColorDark50"))
                         Spacer()

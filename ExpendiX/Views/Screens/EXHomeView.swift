@@ -24,10 +24,10 @@ struct EXHomeView: View {
                     Text("Budget")
                 }
                 .tag(1)
-            EXProfileView()
+            EXRecentTransactionsView()
                 .tabItem {
-                    Image(selection == 2 ? "userSelected" : "user")
-                    Text("Profile")
+                    Image(systemName: "list.bullet")
+                    Text("Recent")
                 }
                 .tag(2)
         }

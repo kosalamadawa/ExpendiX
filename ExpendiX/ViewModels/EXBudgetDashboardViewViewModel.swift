@@ -16,57 +16,6 @@ struct EXBudgetUsage: Codable, Identifiable {
     let usedAmount: Double
 }
 
-let dummyExpenses = [
-    EXExpense(
-        id: "1",
-        userId: "234",
-        amount: 2000.00,
-        description: "Test",
-        category: .transportation,
-        date: Date().timeIntervalSince1970
-    ),
-    EXExpense(
-        id: "1",
-        userId: "234",
-        amount: 2000.00,
-        description: "Test",
-        category: .transportation,
-        date: Date().timeIntervalSince1970
-    ),
-    EXExpense(
-        id: "2",
-        userId: "234",
-        amount: 8000.00,
-        description: "Test",
-        category: .billsAndUtilities,
-        date: Date().timeIntervalSince1970
-    ),
-    EXExpense(
-        id: "3",
-        userId: "234",
-        amount: 5000.00,
-        description: "Test",
-        category: .entertainment,
-        date: Date().timeIntervalSince1970
-    ),
-    EXExpense(
-        id: "4",
-        userId: "234",
-        amount: 20000.00,
-        description: "Test",
-        category: .housing,
-        date: Date().timeIntervalSince1970
-    ),
-    EXExpense(
-        id: "5",
-        userId: "234",
-        amount: 55000.00,
-        description: "Test",
-        category: .foodAndDining,
-        date: Date().timeIntervalSince1970
-    ),
-]
-
 let dummyBudgets = [
     EXBudget(
         id: "1",

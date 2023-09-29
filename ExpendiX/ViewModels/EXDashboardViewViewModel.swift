@@ -9,6 +9,84 @@ import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 
+let dummyIncomes = [
+    EXIncome(
+        id: "1",
+        userId: "123",
+        amount: 50000.00,
+        description: "Test",
+        category: .salary,
+        date: Date().timeIntervalSince1970
+    ),
+    EXIncome(
+        id: "2",
+        userId: "123",
+        amount: 60000.00,
+        description: "Test",
+        category: .business,
+        date: Date().timeIntervalSince1970
+    ),
+    EXIncome(
+        id: "3",
+        userId: "123",
+        amount: 70000.00,
+        description: "Test",
+        category: .freelance,
+        date: Date().timeIntervalSince1970
+    ),
+    EXIncome(
+        id: "4",
+        userId: "123",
+        amount: 80000.00,
+        description: "Test",
+        category: .salary,
+        date: Date().timeIntervalSince1970
+    )
+]
+
+let dummyExpenses = [
+    EXExpense(
+        id: "1",
+        userId: "234",
+        amount: 2000.00,
+        description: "Test",
+        category: .transportation,
+        date: Date().timeIntervalSince1970
+    ),
+    EXExpense(
+        id: "2",
+        userId: "234",
+        amount: 8000.00,
+        description: "Test",
+        category: .billsAndUtilities,
+        date: Date().timeIntervalSince1970
+    ),
+    EXExpense(
+        id: "3",
+        userId: "234",
+        amount: 5000.00,
+        description: "Test",
+        category: .entertainment,
+        date: Date().timeIntervalSince1970
+    ),
+    EXExpense(
+        id: "4",
+        userId: "234",
+        amount: 20000.00,
+        description: "Test",
+        category: .housing,
+        date: Date().timeIntervalSince1970
+    ),
+    EXExpense(
+        id: "5",
+        userId: "234",
+        amount: 55000.00,
+        description: "Test",
+        category: .foodAndDining,
+        date: Date().timeIntervalSince1970
+    ),
+]
+
 final class EXDashboardViewViewModel: ObservableObject {
     @Published var totalExpense = 0.0
     @Published var totalIncome = 0.0
@@ -142,81 +220,11 @@ final class EXDashboardViewViewModel: ObservableObject {
             }
     }
     
-    let dummyIncomes = [
-        EXIncome(
-            id: "1",
-            userId: "123",
-            amount: 50000.00,
-            description: "Test",
-            category: .salary,
-            date: Date().timeIntervalSince1970
-        ),
-        EXIncome(
-            id: "2",
-            userId: "123",
-            amount: 60000.00,
-            description: "Test",
-            category: .business,
-            date: Date().timeIntervalSince1970
-        ),
-        EXIncome(
-            id: "3",
-            userId: "123",
-            amount: 70000.00,
-            description: "Test",
-            category: .freelance,
-            date: Date().timeIntervalSince1970
-        ),
-        EXIncome(
-            id: "4",
-            userId: "123",
-            amount: 80000.00,
-            description: "Test",
-            category: .salary,
-            date: Date().timeIntervalSince1970
-        )
-    ]
-
-    let dummyExpenses = [
-        EXExpense(
-            id: "1",
-            userId: "234",
-            amount: 2000.00,
-            description: "Test",
-            category: .transportation,
-            date: Date().timeIntervalSince1970
-        ),
-        EXExpense(
-            id: "2",
-            userId: "234",
-            amount: 8000.00,
-            description: "Test",
-            category: .billsAndUtilities,
-            date: Date().timeIntervalSince1970
-        ),
-        EXExpense(
-            id: "3",
-            userId: "234",
-            amount: 5000.00,
-            description: "Test",
-            category: .entertainment,
-            date: Date().timeIntervalSince1970
-        ),
-        EXExpense(
-            id: "4",
-            userId: "234",
-            amount: 20000.00,
-            description: "Test",
-            category: .housing,
-            date: Date().timeIntervalSince1970
-        ),
-        EXExpense(
-            id: "5",
-            userId: "234",
-            amount: 55000.00,
-            description: "Test",
-            category: .foodAndDining,
-            date: Date().timeIntervalSince1970
-        ),
-    ]
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print(error)
+        }
+    }
 }
