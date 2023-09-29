@@ -23,6 +23,39 @@ struct EXAddBudgetView: View {
         }
     }
     
+    private func displayReponseMessage(result: Result<Bool, Error>) {
+        switch result {
+        case .success(_):
+            DispatchQueue.main.async {
+                withAnimation {
+                    responseMessageType = .success
+                    responseMessage = "Data saved successfully"
+                    showResponseMessage = true
+                }
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                withAnimation {
+                    showResponseMessage = false
+                    presentationMode.wrappedValue.dismiss()
+                }
+            }
+        case .failure(let error):
+            print(error)
+            DispatchQueue.main.async {
+                withAnimation {
+                    responseMessageType = .failure
+                    responseMessage = "Failed to save data"
+                    showResponseMessage = true
+                }
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                withAnimation {
+                    showResponseMessage = false
+                }
+            }
+        }
+    }
+    
     var body: some View {
         ZStack {
             VStack {
@@ -84,28 +117,7 @@ struct EXAddBudgetView: View {
                         .frame(height: 50)
                     EXButtonView(text: "ADD") {
                         viewModel.addBudget { result in
-                            switch result {
-                            case .success(_):
-                                DispatchQueue.main.async {
-                                    responseMessageType = .success
-                                    responseMessage = "Data saved successfully"
-                                    showResponseMessage = true
-                                }
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                                    showResponseMessage = false
-                                    presentationMode.wrappedValue.dismiss()
-                                }
-                            case .failure(let error):
-                                print(error)
-                                DispatchQueue.main.async {
-                                    responseMessageType = .failure
-                                    responseMessage = "Failed to save data"
-                                    showResponseMessage = true
-                                }
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                                    showResponseMessage = false
-                                }
-                            }
+                            displayReponseMessage(result: result)
                         }
                     }
                     Spacer()

@@ -10,7 +10,12 @@ import SwiftUI
 struct EXAddTransactionView: View {
     var type: EXTransactionType
     
+    @Environment(\.presentationMode) var presentationMode
     @StateObject var viewModel = EXAddTransactionViewViewModel()
+    
+    @State private var showResponseMessage = false
+    @State private var responseMessageType = EXResponseMessageType.success
+    @State private var responseMessage = ""
     
     private var category: String {
         if type == .expense && viewModel.expenseCategory != nil {
@@ -19,6 +24,39 @@ struct EXAddTransactionView: View {
             return viewModel.incomeCategory?.text ?? ""
         } else {
             return "Category"
+        }
+    }
+    
+    private func displayResponseMessage(result: Result<Bool, Error>) {
+        switch result {
+        case .success(_):
+            DispatchQueue.main.async {
+                withAnimation {
+                    responseMessageType = .success
+                    responseMessage = "Data saved successfully"
+                    showResponseMessage = true
+                }
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                withAnimation {
+                    showResponseMessage = false
+                    presentationMode.wrappedValue.dismiss()
+                }
+            }
+        case .failure(let error):
+            print(error)
+            DispatchQueue.main.async {
+                withAnimation {
+                    responseMessageType = .failure
+                    responseMessage = "Failed to save data"
+                    showResponseMessage = true
+                }
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                withAnimation {
+                    showResponseMessage = false
+                }
+            }
         }
     }
     
@@ -85,15 +123,27 @@ struct EXAddTransactionView: View {
                     Spacer()
                     EXButtonView(text: "Add", isLoading: viewModel.isAddingTransaction) {
                         if type == .income {
-                            viewModel.addIncome()
+                            viewModel.addIncome { result in
+                                displayResponseMessage(result: result)
+                            }
                         } else {
-                            viewModel.addExpense()
+                            viewModel.addExpense { result in
+                                displayResponseMessage(result: result)
+                            }
                         }
                     }
                 }
                 .padding(.horizontal, 16)
                 .padding(.vertical, 16)
             }
+            
+            // MARK: - RESPONSE MESSAGE SHEET
+            
+            EXResponseMessageView(
+                showSheet: showResponseMessage,
+                type: responseMessageType,
+                message: responseMessage
+            )
             
             // MARK: - EXPENSE CATEGORY SHEET
             

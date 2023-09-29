@@ -11,8 +11,8 @@ import SwiftUICharts
 struct EXDashboardView: View {
     @StateObject var viewModel = EXDashboardViewViewModel()
     
-    var segments = ["Expense", "Income"]
-    @State private var selectedSegment = "Expense"
+    var segments = ["Expenses", "Incomes"]
+    @State private var selectedSegment = "Expenses"
     
     var body: some View {
         NavigationView {
@@ -66,16 +66,30 @@ struct EXDashboardView: View {
                                 .pickerStyle(.segmented)
                                 .padding(.vertical)
                                 
-                                if selectedSegment == "Expense" {
-                                    EXTransactionsPieChartView(
-                                        type: .expense,
-                                        totalExpensesByCategory: viewModel.totalExpensesByCategory
-                                    )
+                                if selectedSegment == "Expenses" {
+                                    if viewModel.expenses.count <= 0 {
+                                        EXEmptyStateView(
+                                            image: "emptyDashboard",
+                                            message: "You have not added any expenses yet"
+                                        )
+                                    } else {
+                                        EXTransactionsPieChartView(
+                                            type: .expense,
+                                            totalExpensesByCategory: viewModel.totalExpensesByCategory
+                                        )
+                                    }
                                 } else {
-                                    EXTransactionsPieChartView(
-                                        type: .income,
-                                        totalIncomesByCategory: viewModel.totalIncomesByCategory
-                                    )
+                                    if viewModel.incomes.count <= 0 {
+                                        EXEmptyStateView(
+                                            image: "emptyDashboard",
+                                            message: "You have not added any incomes yet"
+                                        )
+                                    } else {
+                                        EXTransactionsPieChartView(
+                                            type: .income,
+                                            totalIncomesByCategory: viewModel.totalIncomesByCategory
+                                        )
+                                    }
                                 }
                                 
                                 Spacer()

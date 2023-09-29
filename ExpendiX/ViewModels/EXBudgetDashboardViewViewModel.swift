@@ -128,6 +128,9 @@ final class EXBudgetDashboardViewViewModel: ObservableObject {
                         strongSelf.isLoadingExpenses = false
                     }
                 }
+                DispatchQueue.main.async {
+                    strongSelf.isLoadingExpenses = false
+                }
             }
     }
 }

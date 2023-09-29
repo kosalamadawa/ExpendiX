@@ -21,34 +21,36 @@ struct EXBudgetDashboardView: View {
                     .controlSize(.large)
             } else {
                 if viewModel.budgetUsages.count <= 0 {
-                    VStack {
-                        EXHeaderView(title: "Budget Management")
-                        Spacer()
-                        Image("emptyState")
-                            .resizable()
-                            .scaledToFit()
-                        Text("You have not added any budget yet")
-                            .foregroundColor(Color("ColorLight20"))
-                        Spacer()
-                        NavigationLink {
-                            EXAddBudgetView()
-                        } label: {
-                            HStack {
-                                Spacer()
-                                Text("ADD BUDGET")
-                                    .foregroundColor(.white)
-                                    .padding(16)
-                                    .font(.system(size: 18, weight: .medium))
-                                Spacer()
+                    ScrollView(.vertical, showsIndicators: false) {
+                        VStack {
+                            EXHeaderView(title: "Budget Management")
+                            Spacer()
+                            EXEmptyStateView(
+                                image: "emptyState",
+                                message: "You have not added any budget yet"
+                            )
+                            Spacer()
+                                .frame(height: 60)
+                            NavigationLink {
+                                EXAddBudgetView()
+                            } label: {
+                                HStack {
+                                    Spacer()
+                                    Text("ADD BUDGET")
+                                        .foregroundColor(.white)
+                                        .padding(16)
+                                        .font(.system(size: 18, weight: .medium))
+                                    Spacer()
+                                }
+                                .background {
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .fill(Color("ColorAccent"))
+                                }
                             }
-                            .background {
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(Color("ColorAccent"))
-                            }
-                        }
 
+                        }
+                        .padding()
                     }
-                    .padding()
                 } else {
                     ScrollView(.vertical, showsIndicators: false) {
                         VStack {
@@ -102,10 +104,14 @@ struct EXBudgetDashboardView: View {
                         }
                         .padding(.horizontal, 16)
                     }
+                    
                 }
             }
         }
         .onAppear {
+            viewModel.fetchData()
+        }
+        .refreshable {
             viewModel.fetchData()
         }
     }

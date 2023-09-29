@@ -23,7 +23,7 @@ final class EXAddTransactionViewViewModel: ObservableObject {
     
     init() {}
     
-    public func addExpense() {
+    public func addExpense(completion: @escaping (Result<Bool, Error>) -> Void) {
         isAddingTransaction = true
         
         guard isValid(type: .expense) else {
@@ -49,12 +49,18 @@ final class EXAddTransactionViewViewModel: ObservableObject {
         let db = Firestore.firestore()
         db.collection("expenses")
             .document(newId)
-            .setData(transaction.asDictionary())
+            .setData(transaction.asDictionary()) { error in
+                guard error == nil else {
+                    completion(.failure(error!))
+                    return
+                }
+                completion(.success(true))
+            }
         
         isAddingTransaction = false
     }
     
-    public func addIncome() {
+    public func addIncome(completion: @escaping (Result<Bool, Error>) -> Void) {
         isAddingTransaction = true
         
         guard isValid(type: .income) else {
@@ -80,7 +86,13 @@ final class EXAddTransactionViewViewModel: ObservableObject {
         let db = Firestore.firestore()
         db.collection("incomes")
             .document(newId)
-            .setData(newIncome.asDictionary())
+            .setData(newIncome.asDictionary()) { error in
+                guard error == nil else {
+                    completion(.failure(error!))
+                    return
+                }
+                completion(.success(true))
+            }
         
         isAddingTransaction = false
     }
