@@ -21,7 +21,7 @@ final class EXAddBudgetViewViewModel: ObservableObject {
     
     init () {}
     
-    public func addBudget() {
+    public func addBudget(completion: @escaping (Result<Bool, Error>) -> Void) {
         isAddingBudget = true
         
         guard isValid() else {
@@ -46,7 +46,13 @@ final class EXAddBudgetViewViewModel: ObservableObject {
         let db = Firestore.firestore()
         db.collection("budgets")
             .document(newId)
-            .setData(budget.asDictionary())
+            .setData(budget.asDictionary()) { error in
+                guard error == nil else {
+                    completion(.failure(error!))
+                    return
+                }
+                completion(.success(true))
+            }
         
         isAddingBudget = false
     }

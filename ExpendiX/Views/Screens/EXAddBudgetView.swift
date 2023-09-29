@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct EXAddBudgetView: View {
+    @Environment(\.presentationMode) var presentationMode
     @StateObject var viewModel = EXAddBudgetViewViewModel()
-    @State private var selection: Int = 2020
+    
+    @State private var showResponseMessage = false
+    @State private var responseMessageType = EXResponseMessageType.success
+    @State private var responseMessage = ""
     
     private var category: String {
         if viewModel.budgetCategory != nil {
@@ -42,7 +46,7 @@ struct EXAddBudgetView: View {
                                 .font(.system(size: 16, weight: .semibold))
                                 .background(content: {
                                     Capsule()
-                                        .fill(Color("ColorGreen"))
+                                        .fill(.blue)
                                         .padding(-8)
                                 })
                                 .background(content: {
@@ -59,7 +63,7 @@ struct EXAddBudgetView: View {
                 .padding(.horizontal, 16)
                 .background {
                     Rectangle()
-                        .fill(Color("ColorGreen"))
+                        .fill(.blue)
                         .edgesIgnoringSafeArea(.top)
                 }
                 
@@ -79,23 +83,55 @@ struct EXAddBudgetView: View {
                     Spacer()
                         .frame(height: 50)
                     EXButtonView(text: "ADD") {
-                        viewModel.addBudget()
+                        viewModel.addBudget { result in
+                            switch result {
+                            case .success(_):
+                                DispatchQueue.main.async {
+                                    responseMessageType = .success
+                                    responseMessage = "Data saved successfully"
+                                    showResponseMessage = true
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                    showResponseMessage = false
+                                    presentationMode.wrappedValue.dismiss()
+                                }
+                            case .failure(let error):
+                                print(error)
+                                DispatchQueue.main.async {
+                                    responseMessageType = .failure
+                                    responseMessage = "Failed to save data"
+                                    showResponseMessage = true
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                    showResponseMessage = false
+                                }
+                            }
+                        }
                     }
                     Spacer()
                 }
                 .padding(16)
             }
             
+            // MARK: - RESPONSE MESSAGE SHEET
+            
+            EXResponseMessageView(
+                showSheet: showResponseMessage,
+                type: responseMessageType,
+                message: responseMessage
+            )
             
             // MARK: - CATEGORY SHEET
             
-            EXExpenseCategorySheetView(showSheet: viewModel.showBudgetCategoriesSheet, selectCategory: { selectedCategory in
-                viewModel.budgetCategory = selectedCategory as? EXExpenseCategory
-            }) {
-                withAnimation {
-                    viewModel.showBudgetCategoriesSheet.toggle()
+            EXExpenseCategorySheetView(
+                showSheet: viewModel.showBudgetCategoriesSheet,
+                selectCategory: { selectedCategory in
+                    viewModel.budgetCategory = selectedCategory as? EXExpenseCategory
+                }) {
+                    withAnimation {
+                        viewModel.showBudgetCategoriesSheet.toggle()
+                    }
                 }
-            }
         }
         .navigationBarBackButtonHidden()
     }

@@ -16,11 +16,11 @@ struct EXBudgetDashboardView: View {
     
     var body: some View {
         NavigationView {
-            if viewModel.isLoadingData {
+            if viewModel.isLoadingBudgets || viewModel.isLoadingExpenses {
                 ProgressView()
                     .controlSize(.large)
             } else {
-                if !viewModel.isLoadingData && viewModel.budgets.count <= 0 {
+                if viewModel.budgetUsages.count <= 0 {
                     VStack {
                         EXHeaderView(title: "Budget Management")
                         Spacer()
@@ -50,7 +50,7 @@ struct EXBudgetDashboardView: View {
                     }
                     .padding()
                 } else {
-                    ScrollView(.vertical) {
+                    ScrollView(.vertical, showsIndicators: false) {
                         VStack {
                             EXHeaderView(title: "Budget Management")
                             
@@ -74,15 +74,22 @@ struct EXBudgetDashboardView: View {
                             }
                             
                             LazyVGrid(columns: gridLayout) {
-                                ForEach(viewModel.budgets) { budget in
+                                ForEach(viewModel.budgetUsages) { budgetUsage in
                                     HStack {
-                                        VStack(alignment: .leading, spacing: 16) {
-                                            Text(budget.category.text)
-                                                .foregroundColor(Color("ColorLight20"))
-                                                .font(.system(size: 16, weight: .medium))
-                                            Text("\(budget.amount, specifier: "%.2f")")
-                                                .font(.system(size: 18, weight: .semibold))
+                                        ProgressView(value: (budgetUsage.usedAmount/budgetUsage.budgetAmount)) {
+                                            VStack(alignment: .leading, spacing: 16) {
+                                                Text(budgetUsage.category.text)
+                                                    .foregroundColor(Color("ColorLight20"))
+                                                    .font(.system(size: 16, weight: .medium))
+                                                Text("\(budgetUsage.budgetAmount, specifier: "%.2f")")
+                                                    .font(.system(size: 18, weight: .semibold))
+                                                    .padding(.bottom, 8)
+                                            }
+                                        } currentValueLabel: {
+                                            Text("\(ceil((budgetUsage.usedAmount/budgetUsage.budgetAmount)*100), specifier: "%.0f") %")
                                         }
+                                        .tint(budgetUsage.usedAmount > budgetUsage.budgetAmount ? .red : .green)
+                                        
                                         Spacer()
                                     }
                                     .padding()

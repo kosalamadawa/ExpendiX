@@ -52,6 +52,7 @@
 		E8DA1ABB2AA45FB60068B333 /* EXProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DA1ABA2AA45FB60068B333 /* EXProfileViewViewModel.swift */; };
 		E8F022402AC08F6400AF173E /* EXDashboardViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F0223F2AC08F6400AF173E /* EXDashboardViewViewModel.swift */; };
 		E8F022422AC09E0500AF173E /* EXExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F022412AC09E0500AF173E /* EXExpense.swift */; };
+		E8F1BC7E2AC6E579004321B8 /* EXResponseMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F1BC7D2AC6E579004321B8 /* EXResponseMessageView.swift */; };
 		E8F2CECE2AA4DF9E0066894F /* EXDashboardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2CECD2AA4DF9E0066894F /* EXDashboardItemView.swift */; };
 		E8F42DA32AA4DC47006F5264 /* EXDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F42DA22AA4DC47006F5264 /* EXDashboardView.swift */; };
 		E8FC32BD2AC1F95800AE60FE /* EXIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FC32BC2AC1F95800AE60FE /* EXIncome.swift */; };
@@ -102,6 +103,7 @@
 		E8DA1ABA2AA45FB60068B333 /* EXProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXProfileViewViewModel.swift; sourceTree = "<group>"; };
 		E8F0223F2AC08F6400AF173E /* EXDashboardViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXDashboardViewViewModel.swift; sourceTree = "<group>"; };
 		E8F022412AC09E0500AF173E /* EXExpense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXExpense.swift; sourceTree = "<group>"; };
+		E8F1BC7D2AC6E579004321B8 /* EXResponseMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXResponseMessageView.swift; sourceTree = "<group>"; };
 		E8F2CECD2AA4DF9E0066894F /* EXDashboardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXDashboardItemView.swift; sourceTree = "<group>"; };
 		E8F42DA22AA4DC47006F5264 /* EXDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXDashboardView.swift; sourceTree = "<group>"; };
 		E8FC32BC2AC1F95800AE60FE /* EXIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXIncome.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				E83291A52AC499CC00FD1F57 /* EXTransactionTypeSheetView.swift */,
 				E83291A72AC49C5600FD1F57 /* EXTransactionTypeView.swift */,
 				E83291A92AC4A68F00FD1F57 /* EXIncomeCategorySheetView.swift */,
+				E8F1BC7D2AC6E579004321B8 /* EXResponseMessageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				E82546F92AA31A3A00FE78E0 /* EXTextFieldView.swift in Sources */,
 				E8DA1AB52AA458B60068B333 /* EXMainView.swift in Sources */,
 				E83291AA2AC4A68F00FD1F57 /* EXIncomeCategorySheetView.swift in Sources */,
+				E8F1BC7E2AC6E579004321B8 /* EXResponseMessageView.swift in Sources */,
 				E8C9F2502AC328B700DC6DA2 /* EXTransactionsPieChartView.swift in Sources */,
 				E84F239A2ABEE3B0002FC53D /* EXBudgetDashboardView.swift in Sources */,
 				E84F23A22ABF3C71002FC53D /* EXPickerView.swift in Sources */,
